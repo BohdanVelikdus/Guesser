@@ -1,0 +1,35 @@
+﻿<Window x:Class="Guesser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Guesser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Name="MainGrid" Background="Aquamarine">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Min value: " Grid.Column="0" Grid.Row="0" FontSize="20" TextAlignment="Center"/>
+        <TextBlock Text="Max value: " Grid.Column="0" Grid.Row="1" FontSize="20" TextAlignment="Center"/>
+        <CheckBox Name="IsIntegralCheckbox" Content="Is integral type?" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" FontSize="20" Checked="Checkbox_Checked" Unchecked="Checkbox_Checked"/>
+        <CheckBox Name="IsPreciseCheckBox" Content="Is precise?" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" FontSize="20" Visibility="Hidden" Checked="Checkbox_Checked" Unchecked="Checkbox_Checked"/>
+        <TextBlock Text="The type: " TextAlignment="Center" Grid.Column="0" Grid.Row="4" FontSize="20"/>
+        <Label Name="LabelResult" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="20"/>
+        
+        <TextBox Name="MinValueTextBox" Grid.Column="1" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" KeyDown="TextBox_KeyDown" TextChanged="TextBox_TextChanged"/>
+        <TextBox Name="MaxValueTextBox" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" KeyDown="TextBox_KeyDown" TextChanged="TextBox_TextChanged"/>
+        
+        
+        
+    </Grid>
+</Window>
